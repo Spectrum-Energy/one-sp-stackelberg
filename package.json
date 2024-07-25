@@ -1,0 +1,19 @@
+{
+  "name": "one-sp-stackelberg",
+  "version": "1.0.0",
+  "description": "The repository for the article whose title is Dynamic Spectrum Sharing in a Blockchain Enabled Network With Multiple Cell-Free Massive MIMO Virtual Operators",
+  "scripts": {
+    "coverage": "npx hardhat coverage",
+    "docgen": "npx hardhat docgen",
+    "test": "npx hardhat test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "4.9.2"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "hardhat": "2.22.2",
+    "solidity-coverage": "0.8.12",
+    "solidity-docgen": "0.6.0-beta.36"
+  }
+}

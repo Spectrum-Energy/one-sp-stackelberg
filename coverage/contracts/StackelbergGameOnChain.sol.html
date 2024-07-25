@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts\StackelbergGameOnChain.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> StackelbergGameOnChain.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/38</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+import "./StackelbergGame.sol";
+import "@openzeppelin/contracts/utils/math/Math.sol";
+&nbsp;
+contract StackelbergGameOnChain is StackelbergGame {
+&nbsp;
+    constructor(address[] memory c) StackelbergGame(c) { }
+   
+    event StackelbergGameOutput(uint256 indexed id);
+&nbsp;
+    function solveStackelbergGame(uint256 id) public onlyRole(SP) {
+        require(_sg[id].state == State.EVALUATION);
+        uint256 C_set_length = _sg[id].participants.length;
+        uint256[] memory C_set = new uint256[](C_set_length);
+&nbsp;
+        Participant[] memory participants = new Participant[](C_set_length);
+        bool Solved = false;
+&nbsp;
+        for(uint256 i = 0; i &lt; C_set_length; ++i) {
+            C_set[i] = i;
+            participants[i] = _sg[id].participant[_sg[id].participants[i]];
+        }
+&nbsp;
+        while (!Solved) {
+            
+            // Calculate alpha
+            uint256 alpha_num = 0;
+            uint256 alpha_den = 0;
+&nbsp;
+            for(uint256 i = 0; i &lt; C_set_length; ++i) {
+                alpha_num += (Math.sqrt(participants[C_set[i]].w * participants[C_set[i]].varrho * DECIMAL_PRECISION / participants[C_set[i]].eta));
+                alpha_den += (participants[C_set[i]].varrho / participants[C_set[i]].eta);
+            }
+            alpha_den += _sg[id].B;
+&nbsp;
+            uint256 alpha = alpha_num / alpha_den;
+&nbsp;
+            for(uint256 i = 0; i &lt; C_set_length; ++i) {
+                participants[C_set[i]].p = alpha * Math.sqrt(Math.mulDiv(participants[C_set[i]].eta, participants[C_set[i]].w, participants[C_set[i]].varrho) * DECIMAL_PRECISION) / DECIMAL_PRECISION;
+                participants[C_set[i]].b = participants[C_set[i]].w * DECIMAL_PRECISION / participants[C_set[i]].p - participants[C_set[i]].varrho * DECIMAL_PRECISION / participants[C_set[i]].eta;
+            }
+&nbsp;
+            Solved = true;
+&nbsp;
+            // find (B_c(C_set) &lt; 0, 1)
+            for (uint256 i = 0; i &lt; C_set_length; ++i) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if(participants[C_set[i]].b &lt; 0) {
+                    Solved = false;
+                    break;
+                }
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(!Solved) {
+&nbsp;
+                // argmin
+<span class="cstat-no" title="statement not covered" >                uint256 cp = 0;</span>
+<span class="cstat-no" title="statement not covered" >                for (uint256 i = 1; i &lt; C_set_length; ++i) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (participants[C_set[i]].b &lt; participants[cp].b) {</span>
+                        cp = C_set[i];
+                    }
+                }
+&nbsp;
+                // remove cp from C_set
+                C_set[cp] = C_set[C_set_length - 1];
+                C_set_length --;
+&nbsp;
+                participants[cp].b = 0;
+                participants[cp].p = 0;
+            }
+        }
+&nbsp;
+        // Assign results
+        for (uint i = 0; i &lt; C_set_length; i++) {
+            address c = _sg[id].participants[C_set[i]];
+            _sg[id].participant[c].p = participants[C_set[i]].p;
+            _sg[id].participant[c].b = participants[C_set[i]].b;
+        }
+&nbsp;
+        emit StackelbergGameOutput(id);
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jul 25 2024 12:36:37 GMT+0200 (hora de verano de Europa central)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
